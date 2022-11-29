@@ -35,7 +35,7 @@
 #include <Unknwn.h>
 #include <Hstring.h>
 
-#include <winrt/coroutine.h>
+//#include <winrt/coroutine.h>
 #include <winrt/Windows.ApplicationModel.h>
 #include <winrt/Windows.ApplicationModel.Activation.h>
 #include <winrt/Windows.Foundation.h>
