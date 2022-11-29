@@ -104,6 +104,7 @@ namespace winrt::PhotoEditor::implementation
 
             try
             {
+                co_await wil::resume_foreground(this->DispatcherQueue());
                 auto thumbnail = co_await impleType->GetImageThumbnailAsync();
                 image.Source(thumbnail);
             }
