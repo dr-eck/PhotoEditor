@@ -41,6 +41,8 @@ namespace winrt::PhotoEditor::implementation
             m_imageFileType(type),
             m_imageFile(imageFile)
         {
+            if (m_imageProperties.Title() != L"")
+                m_imageName = m_imageProperties.Title();
         }
 
         // Gets the thumbnail of current image file (m_imageFile).
@@ -73,7 +75,7 @@ namespace winrt::PhotoEditor::implementation
         // Gets or sets the image title.
         hstring ImageTitle() const
         {
-            return m_imageProperties.Title() == L"" ? m_imageName : m_imageProperties.Title();
+            return m_imageName;
         }
 
         void ImageTitle(hstring const& value);
